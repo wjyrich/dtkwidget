@@ -116,7 +116,8 @@ void DAboutDialogPrivate::init()
     licenseLabel->hide();
 
     QLabel *versionTipLabel = new QLabel(QObject::tr("Version"));
-    fontManager->bind(versionTipLabel, DFontSizeManager::T10, QFont::Thin);
+    fontManager->bind(versionTipLabel, DFontSizeManager::T10, QFont::Medium);
+    versionTipLabel->setForegroundRole(QPalette::BrightText);
     featureLabel = new QLabel(websiteLinkTemplate.arg(websiteLink).arg(QObject::tr("Features")));
     featureLabel->setContextMenuPolicy(Qt::NoContextMenu);
     featureLabel->setOpenExternalLinks(false);
@@ -136,9 +137,11 @@ void DAboutDialogPrivate::init()
     QLabel *homePageTipLabel = new QLabel(QObject::tr("Homepage"));
     fontManager->bind(homePageTipLabel, DFontSizeManager::T10, QFont::Thin);
     QLabel *descriptionTipLabel = new QLabel(QObject::tr("Description"));
-    fontManager->bind(descriptionTipLabel, DFontSizeManager::T10, QFont::Thin);
+    fontManager->bind(descriptionTipLabel, DFontSizeManager::T10, QFont::Medium);
+    descriptionTipLabel->setForegroundRole(QPalette::BrightText);
     acknowledgementTipLabel = new QLabel(QObject::tr("Acknowledgements"));
-    fontManager->bind(acknowledgementTipLabel, DFontSizeManager::T10, QFont::Thin);
+    fontManager->bind(acknowledgementTipLabel, DFontSizeManager::T10, QFont::Medium);
+    acknowledgementTipLabel->setForegroundRole(QPalette::BrightText);
     licenseTipLabel = new QLabel(QObject::tr("License"));
     fontManager->bind(licenseTipLabel, DFontSizeManager::T10, QFont::Thin);
     licenseTipLabel->hide();
